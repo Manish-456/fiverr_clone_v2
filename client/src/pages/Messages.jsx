@@ -74,8 +74,8 @@ const content =  data?.map((c) => {
       <td className="md:p-1 p-0 lg:text-xl text-sm">{users[c?.id]}</td>
       <td className="md:p-1 p-2 lg:text-xl text-sm">
         <Link to={`/message/${c?.id}`} state = {{
-            sellerId : c?.sellerId,
-            buyerId : c?.buyerId
+            ...(c.sellerId && {sellerId : c?.sellerId}),
+            ...(c.sellerId && {buyerId : c?.buyerId})
           }}>
           {c?.lastMessage && c?.lastMessage?.substring(0, 100)}...
         </Link>
