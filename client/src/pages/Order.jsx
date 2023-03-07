@@ -56,7 +56,7 @@ const Order = () => {
             <td>
               <img
                 className="h-6 w-[50px] object-cover"
-                src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/297218714/original/25567bb48d2905bda95d7d5f24e4062f439198d1.png"
+                src={order?.img}
                 alt=""
               />
             </td>
