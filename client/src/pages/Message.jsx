@@ -11,7 +11,8 @@ const Message = () => {
   const location = useLocation();
   const currentUser = getCurrentUser();
   const queryClient = useQueryClient();
-  const { sellerId, buyerId } = location?.state;
+  const sellerId = location?.state?.sellerId;
+  const buyerId = location?.state?.buyerId;
 
   let buyer = currentUser?._id === sellerId ? buyerId : sellerId;
   let name = getSingleUser(buyer);
