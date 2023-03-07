@@ -24,7 +24,7 @@ const Order = () => {
         const res = await newRequest.get(`/conversation/single/${id}`);
         navigate(`/message/${res?.data?.id}`) 
       } catch (err) {
-         if(err.response.status === 404 && buyerId !== currentUser?._id){
+         if(err.response.status === 404 && buyerId === currentUser?._id){
           const res = await newRequest.post('/conversation/', {to : currentUser?.isSeller ? buyerId : sellerId})
           navigate(`/message/${res?.data?.id}`) 
         }
