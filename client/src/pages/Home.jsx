@@ -4,9 +4,6 @@ import CardSlider from "../components/CardSlider";
 import Trusted from "../components/Trusted";
 import CatCard from "../components/CatCard";
 import { cards } from "../data";
-import video from "../assets/video1.mp4";
-import check from "../assets/check.png";
-import digitalPeople from "../assets/digitalPeople.webp";
 import ProjectCard from "../components/ProjectCard";
 import useWindowSize from "../hooks/useWindowSize";
 import { useQuery } from "@tanstack/react-query";
@@ -35,13 +32,13 @@ const Home = () => {
 
   const contents = (heading, subHeading = null) => {
     return (
-      <>
+      <div className="flex flex-col gap-4">
         <div className="flex items-center gap-2">
-          <img className="w-6" src={check} alt="" />
+          <img className="w-6" src={"/img/check.png"} alt="" />
           <h1 className="md:text-xl text-sm font-semibold ">{heading}</h1>
         </div>
         <p className="text-gray-500 text-sm md:text-[18px] leading-6 ">{subHeading}</p>
-      </>
+      </div>
     );
   };
   return (
@@ -84,7 +81,7 @@ const Home = () => {
           </div>
           {/* right */}
           <div className="flex-3 lg:w-[50%] w-[320px]">
-            <video className="w-[720px]" src={video} controls></video>
+            <video className="w-[720px]" src={'/img/video1.mp4'} controls></video>
           </div>
         </div>
       </div>
@@ -123,7 +120,7 @@ const Home = () => {
           </div>
           {/* right */}
           <div className="flex-3 lg:w-[50%] w-[320px]">
-            <img className="w-full" src={digitalPeople}  />
+            <img className="w-full" src='/img/digitalPeople.webp'  />
           </div>
         </div>
       </div>
