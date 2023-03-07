@@ -1,6 +1,6 @@
 import React from "react";
 import Featured from "../components/Featured";
-import Slide from "../components/slide";
+import CardSlider from "../components/CardSlider";
 import Trusted from "../components/Trusted";
 import CatCard from "../components/CatCard";
 import { cards } from "../data";
@@ -48,11 +48,11 @@ const Home = () => {
     <div>
       <Featured />
       <Trusted />
-      <Slide slidesToShow={slideNum} arrowsScroll={slideNum}>
+      <CardSlider slidesToShow={slideNum} arrowsScroll={slideNum}>
         {cards.map((card) => {
           return <CatCard key={card.id} item={card} />;
         })}
-      </Slide>
+      </CardSlider>
       {/* Features */}
       <div className="bg-[#f1fdf7] p-[100px] flex justify-center">
         <div className="flex w-[1400px] flex-col-reverse md:flex-row  items-center gap-10 md:gap-[200px]">
@@ -129,11 +129,11 @@ const Home = () => {
       </div>
  <div className="bg-[#f5f5f5]">
   
- {isLoading ? "loading please wait..." : error ? "Something went wrong..." : <Slide slidesToShow={slideNum} arrowsScroll={slideNum}>
+ {isLoading ? "loading please wait..." : error ? "Something went wrong..." : <CardSlider slidesToShow={slideNum} arrowsScroll={slideNum}>
           {data.map((gig) => {
             return <ProjectCard key={gig._id} project={gig} />;
           })}
-        </Slide>}
+        </CardSlider>}
  </div>
       </div>
   );
