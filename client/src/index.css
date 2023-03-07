@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.navButton{
+    @apply hover:bg-[#1dbf73] hover:text-white border
+}
+
+.input-control{
+    @apply  p-5 rounded-xl outline-none border border-gray-400
+}
+label{
+    @apply text-gray-400 text-lg
+}
+.links{
+   font-family : 'Montserrat', sans-serif;
+}
+
+.primary{
+    @apply bg-[#0e6f42] text-white border hover:bg-[#0d5031]
+}
+
+.carousel-prev, .carousel-next{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(237, 236, 236);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+/* tr:nth-child(even){
+    background-color: #1dbf730f;
+} */
+.carousel-next::before, .carousel-prev::before{
+    margin-left: 14px;
+}
+.active{
+    background : #1dbf730f !important;
+}
+
+td{
+    @apply p-4
+}
+td:nth-child(1){
+    @apply text-black font-bold
+}
+
+td:nth-child(2), td:nth-child(3){
+    @apply text-gray-500
+} 
+
+.other{
+   @apply flex gap-5 max-w-[600px] text-xl
+}
+.other{
+border-radius: 0px 20px 20px 20px 
+}
+.othermessage{  @apply shadow-lg}
+.othermessage{
+    background-color: lightgray;
+
+    border-radius: 0px 20px 20px 20px ;
+ 
+}
+.footer-el:nth-child(even){
+  @apply lg:flex hidden
+}
+
+.explore_hero{
+    /* padding: 80px 50px; */
+
+}
+
+.explore_section{
+    /* content: ""; */
+    background-image: url('https://discover.fiverr.com/wp-content/uploads/disover-main-banner-korshenboym-noresize-1.jpg');
+    color: #fff;
+    padding: 80px 50px;
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: cover;
+
+}
+
+.own{
+    @apply flex gap-5 max-w-[600px] text-xl flex-row-reverse self-end
+}
+.ownmessage {
+    @apply shadow-lg
+}
+.ownmessage{
+    background-color: royalblue;
+    border-radius: 20px 0px 20px 20px ;
+    color: white;
+    
+
+    
+}
+ 
+button:disabled{
+    @apply  hidden
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+  }
+
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 24px;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+
+  input:checked + .slider {
+    background-color: #2196f3;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  
