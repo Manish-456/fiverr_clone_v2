@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 import newRequest from "../utils/newRequest";
 import moment from "moment";
 import getCurrentUser from "../utils/getCurrentUser";
-import getSingleUser from "../utils/getSingleUser";
+import useTitle from "../hooks/useTitle";
  
   const Messages = () => {
+    useTitle("• Messages")
   const queryClient = useQueryClient();
   const currentUser = getCurrentUser();
   const [users, setUsers] = useState({});

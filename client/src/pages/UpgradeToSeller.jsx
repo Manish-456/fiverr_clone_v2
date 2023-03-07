@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import useTitle from "../hooks/useTitle";
 
 const UpgradeToSeller = () => {
+  useTitle("• Upgrade To Seller")
   return (
     <div className="flex justify-center">
       <div className="flex items-center lg:flex-row flex-col-reverse  mt-12 gap-12 w-full  lg:w-[1400px] justify-center">

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import useTitle from "../hooks/useTitle";
 import newRequest from "../utils/newRequest";
 import upload from "../utils/upload";
 
 const Register = () => {
+  useTitle("• Register")
   const [file, setFile] = useState("");
   const navigate = useNavigate();
   const [user, setUser] = useState({

@@ -1,10 +1,11 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react'
 import GigCard from '../components/GigCard';
+import useTitle from '../hooks/useTitle';
 import newRequest from '../utils/newRequest';
 
 const Explore = () => {
-    
+  useTitle("• Explore")
  const {isLoading, error, data} = useQuery({
     queryKey : ["randomGigs"],
     queryFn : () => {
@@ -15,6 +16,7 @@ const Explore = () => {
    })
   
   return (
+    
     <>
     <div className='explore'>
       <div className="explore_section">

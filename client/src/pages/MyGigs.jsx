@@ -1,11 +1,13 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import React from "react";
 import { Link } from "react-router-dom";
+import useTitle from "../hooks/useTitle";
 import useWindowSize from "../hooks/useWindowSize";
 import getCurrentUser from "../utils/getCurrentUser";
 import newRequest from "../utils/newRequest";
 const MyGigs = () => {
   const currentUser = getCurrentUser();
+  useTitle("• MyGigs")
   const queryClient = useQueryClient();
   const [innerWidth, innerHeight] = useWindowSize();
   

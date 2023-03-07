@@ -8,7 +8,9 @@ import ProjectCard from "../components/ProjectCard";
 import useWindowSize from "../hooks/useWindowSize";
 import { useQuery } from "@tanstack/react-query";
 import newRequest from '../utils/newRequest'
+
 const Home = () => {
+
   const [innerWidth, innerHeight] = useWindowSize();
   let slideNum = 5;
  if(innerWidth <= 1024 && innerWidth >= 930){

@@ -2,9 +2,11 @@ import { useQuery } from "@tanstack/react-query";
 import React, { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import GigCard from "../components/GigCard";
+import useTitle from "../hooks/useTitle";
 
 import newRequest from "../utils/newRequest";
 const Gigs = () => {
+  useTitle("• Gigs")
   const [open, setOpen] = useState(false);
   const [sort, setSort] = useState("sales");
  

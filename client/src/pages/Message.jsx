@@ -1,10 +1,12 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { Link, useLocation, useParams } from "react-router-dom";
+import useTitle from "../hooks/useTitle";
 import getCurrentUser from "../utils/getCurrentUser";
 import getSingleUser from "../utils/getSingleUser";
 import newRequest from "../utils/newRequest";
 
 const Message = () => {
+  useTitle("• Message")
   const { id } = useParams();
   const location = useLocation();
   const currentUser = getCurrentUser();

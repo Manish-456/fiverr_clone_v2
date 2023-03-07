@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import useTitle from "../hooks/useTitle";
 import getCurrentUser from "../utils/getCurrentUser";
 import newRequest from "../utils/newRequest";
 
 const ActivateSellerAccount = () => {
+  useTitle("• Activate Seller Account")
   const [isUserValid, setIsUserValid] = useState(false);
   const [username, setUsername] = useState("");
   const currentUser = getCurrentUser();

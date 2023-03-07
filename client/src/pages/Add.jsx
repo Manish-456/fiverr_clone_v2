@@ -1,11 +1,13 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import React, { useReducer, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import useTitle from "../hooks/useTitle";
 import { gigReducer, INITIAL_STATE } from "../reducers/gigReducer";
 import newRequest from "../utils/newRequest";
 import upload from "../utils/upload";
 
 const Add = () => {
+  useTitle("• Add gig")
   const [singleFile, setSingleFile] = useState(undefined);
   const [files, setFiles] = useState([]);
   const [uploading, setUploading] = useState(false);

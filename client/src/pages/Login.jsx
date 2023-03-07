@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import axios from "axios";
 import newRequest from "../utils/newRequest";
 import { useNavigate } from "react-router-dom";
+import useTitle from "../hooks/useTitle";
 const Login = () => {
+  useTitle("• Signup")
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);

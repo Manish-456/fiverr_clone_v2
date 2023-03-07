@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import useTitle from "../hooks/useTitle";
 import newRequest from "../utils/newRequest";
 
 const Success = () => {
+  useTitle("• Payment-Success")
   const { search } = useLocation();
 
   const navigate = useNavigate();

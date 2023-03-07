@@ -3,11 +3,13 @@ import { Slider } from "infinite-react-carousel/lib";
 
 import { useNavigate, useParams } from "react-router-dom";
 import Reviews from "../components/Reviews";
+import useTitle from "../hooks/useTitle";
 import getCurrentUser from "../utils/getCurrentUser";
 
 import newRequest from "../utils/newRequest";
 
 const Gig = () => {
+  useTitle("• Gig")
   const { id } = useParams();
   const navigate = useNavigate();
   const currentUser = getCurrentUser();

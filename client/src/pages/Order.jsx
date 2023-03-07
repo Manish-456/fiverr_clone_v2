@@ -4,7 +4,9 @@ import { useNavigate } from "react-router-dom";
 import newRequest from "../utils/newRequest";
 import useWindowSize from "../hooks/useWindowSize";
 import getCurrentUser from "../utils/getCurrentUser";
+import useTitle from "../hooks/useTitle";
 const Order = () => {
+  useTitle("• Order")
   const currentUser = getCurrentUser();
   const [innerWidth, innerHeight] = useWindowSize();
   const navigate = useNavigate();
