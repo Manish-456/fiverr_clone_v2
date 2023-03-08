@@ -97,7 +97,7 @@ const UpgradeToSeller = () => {
           </Link>
         </div>
         <div className="right flex-4 lg:w-[500px] lg:ml-12 ml-0 lg:p-0 p-1 w-full">
-          <video  autoPlay=""  loop >
+          <video  autoPlay="" controls  loop >
             <source
               src="https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/v1/video-attachments/generic_asset/asset/966b0ae895e85b526600eff1d21e3cf4-1674728725728/Seller%20onboarding%20video%20HQ"
               type="video/mp4"
